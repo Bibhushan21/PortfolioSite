@@ -20,7 +20,7 @@ This is the personal portfolio website of **Bibhushan Subedi**, showcasing vario
   - HTML5  
   - CSS3  
   - JavaScript  
-  - TailwindCSS
+ 
 
 - **Tools & Libraries**:
   - FontAwesome (icons)
