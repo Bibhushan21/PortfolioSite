@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -5,10 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mein Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio von Bibhushan Subedi – Softwareentwicklung, Projekte und Kontakt."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
     <div id="scroll-progress" aria-hidden="true"></div>
     <nav id="desktop-nav">
       <div class="logo">Bibhushan Subedi</div>
@@ -18,6 +30,17 @@
           <li><a href="#experience">Kompetenzen</a></li>
           <li><a href="#projects">Projekte</a></li>
           <li><a href="#contact">Kontakt</a></li>
+          <li>
+            <button
+              class="icon-btn"
+              type="button"
+              id="theme-toggle"
+              aria-label="Theme umschalten"
+              title="Theme umschalten"
+            >
+              <span aria-hidden="true">☾</span>
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
@@ -34,9 +57,22 @@
           <li><a href="#experience" onclick="toggleMenu()">Kompetenzen</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projekte</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+          <li>
+            <button
+              class="icon-btn"
+              type="button"
+              id="theme-toggle-mobile"
+              aria-label="Theme umschalten"
+              title="Theme umschalten"
+              onclick="toggleMenu()"
+            >
+              <span aria-hidden="true">☾</span>
+            </button>
+          </li>
         </div>
       </div>
     </nav>
+    <main id="main" tabindex="-1">
     <section id="profile">
       <div class="section__pic-container">
         <img src="./assets/Front.png" alt="Profilfoto von Bibhushan Subedi" />
@@ -69,6 +105,20 @@
             class="icon"
             onclick="location.href='https://github.com/Bibhushan21'"
           />
+        </div>
+        <div class="metrics-strip" aria-label="Kurze Kennzahlen">
+          <div class="metric">
+            <div class="metric__value">6+</div>
+            <div class="metric__label">Projekte</div>
+          </div>
+          <div class="metric">
+            <div class="metric__value">2026</div>
+            <div class="metric__label">B.Sc. Abschluss</div>
+          </div>
+          <div class="metric">
+            <div class="metric__value">AI · Web · Mobile</div>
+            <div class="metric__label">Fokus</div>
+          </div>
         </div>
       </div>
     </section>
@@ -404,127 +454,210 @@
     <section id="projects">
       <p class="section__text__p1">Meine aktuellen Projekte</p>
       <h1 class="title">Projekte</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/weatherapp Image.png"
-                alt="Wetter-App"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Wetter-App</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Bibhushan21/Flutter_WeatherApp'"
-              >
-                GitHub
-              </button>
-              
-            </div>
+      <div class="featured-case" data-magnetic>
+        <div class="featured-case__media">
+          <img
+            src="./assets/weatherapp Image.png"
+            alt="Vorgestelltes Projekt: Wetter-App"
+            class="featured-case__img"
+            loading="lazy"
+          />
+        </div>
+        <div class="featured-case__content">
+          <p class="eyebrow">Featured Case Study</p>
+          <h2 class="featured-case__title">Wetter-App (Flutter)</h2>
+          <p class="featured-case__desc">
+            Echtzeit-Wetter mit klarer UX: schnelle Suche, saubere Zustände und zuverlässige Anzeige auf Mobile.
+          </p>
+          <ul class="bullet">
+            <li>Realtime Updates & robuste Fehlerzustände</li>
+            <li>Clean UI + Performance-orientierte API Calls</li>
+            <li>Cross-platform App-Architektur</li>
+          </ul>
+          <div class="chip-row" aria-label="Technologien">
+            <span class="chip">Flutter</span>
+            <span class="chip">Dart</span>
+            <span class="chip">REST API</span>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/shipping-calculator.png"
-                alt="Kostenrechner für Container-Versand"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Kostenrechner für Container-Versand</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Bibhushan21/ShippingCostCalculator'"
-              >
-                GitHub
-              </button>
-              
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Password_Management_System.jpeg"
-                alt="Passwortverwaltungssystem"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Passwortverwaltungssystem</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Bibhushan21/Password_Management_System_GUI'"
-              >
-                GitHub
-              </button>
-              
-            </div>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-1"
+              type="button"
+              data-open-project
+              data-title="Wetter-App (Flutter)"
+              data-tags="mobile,frontend"
+              data-github="https://github.com/Bibhushan21/Flutter_WeatherApp"
+              data-image="./assets/weatherapp Image.png"
+              data-description="Echtzeit-Wetter-App mit stabilen Zuständen, Search UX und sauberem UI."
+            >
+              Details ansehen
+            </button>
+            <button
+              class="btn btn-color-2"
+              type="button"
+              onclick="location.href='https://github.com/Bibhushan21/Flutter_WeatherApp'"
+            >
+              GitHub
+            </button>
           </div>
         </div>
       </div>
-      <div class="experience-details-container"></div>
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/FaceRecognition.jpeg"
-                alt="Gesichtserkennung und Emotionen"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Gesichtserkennung und Emotionen</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Bibhushan21/Face_Emotion_Detection'"
-              >
-                GitHub
-              </button>
-              
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Dino.jpeg"
-                alt="Dino-Spiel (ML-DQN)"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Dino-Spiel (ML-DQN)</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Bibhushan21/DinoAi-ML-DQN-'"
-              >
-                GitHub
-              </button>
-              
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/SQL.jpeg"
-                alt="Fußball-Management-System (SQL)"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Fußball-Management-System (SQL)</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Bibhushan21/Football-Management-System'"
-              >
-                GitHub
-              </button>
-              
-            </div>
-          </div>
+
+      <div class="project-toolbar" aria-label="Projektfilter">
+        <div class="chip-row">
+          <button class="chip chip--btn is-active" type="button" data-filter="all">Alle</button>
+          <button class="chip chip--btn" type="button" data-filter="frontend">Frontend</button>
+          <button class="chip chip--btn" type="button" data-filter="backend">Backend</button>
+          <button class="chip chip--btn" type="button" data-filter="ai">AI</button>
+          <button class="chip chip--btn" type="button" data-filter="mobile">Mobile</button>
+          <button class="chip chip--btn" type="button" data-filter="devops">DevOps</button>
         </div>
+      </div>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project-card" data-tags="mobile,frontend">
+          <div class="project-card__media">
+            <img src="./assets/weatherapp Image.png" alt="Wetter-App" class="project-img" loading="lazy" />
+          </div>
+          <h3 class="project-card__title">Wetter-App</h3>
+          <div class="project-card__actions">
+            <button
+              class="btn btn-color-1"
+              type="button"
+              data-open-project
+              data-title="Wetter-App (Flutter)"
+              data-tags="mobile,frontend"
+              data-github="https://github.com/Bibhushan21/Flutter_WeatherApp"
+              data-image="./assets/weatherapp Image.png"
+              data-description="Echtzeit-Wetter-App mit Search UX, stabilen Zuständen und klarer UI."
+            >
+              Details
+            </button>
+            <button class="btn btn-color-2" type="button" onclick="location.href='https://github.com/Bibhushan21/Flutter_WeatherApp'">
+              GitHub
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="frontend,backend">
+          <div class="project-card__media">
+            <img src="./assets/shipping-calculator.png" alt="Kostenrechner für Container-Versand" class="project-img" loading="lazy" />
+          </div>
+          <h3 class="project-card__title">Shipping Cost Calculator</h3>
+          <div class="project-card__actions">
+            <button
+              class="btn btn-color-1"
+              type="button"
+              data-open-project
+              data-title="Shipping Cost Calculator"
+              data-tags="frontend,backend"
+              data-github="https://github.com/Bibhushan21/ShippingCostCalculator"
+              data-image="./assets/shipping-calculator.png"
+              data-description="Kostenrechner mit klarer Eingabe-UX und schnellen Ergebnissen."
+            >
+              Details
+            </button>
+            <button class="btn btn-color-2" type="button" onclick="location.href='https://github.com/Bibhushan21/ShippingCostCalculator'">
+              GitHub
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="frontend,backend">
+          <div class="project-card__media">
+            <img src="./assets/Password_Management_System.jpeg" alt="Passwortverwaltungssystem" class="project-img" loading="lazy" />
+          </div>
+          <h3 class="project-card__title">Password Management System</h3>
+          <div class="project-card__actions">
+            <button
+              class="btn btn-color-1"
+              type="button"
+              data-open-project
+              data-title="Password Management System"
+              data-tags="frontend,backend"
+              data-github="https://github.com/Bibhushan21/Password_Management_System_GUI"
+              data-image="./assets/Password_Management_System.jpeg"
+              data-description="GUI-App zur sicheren Verwaltung von Zugangsdaten."
+            >
+              Details
+            </button>
+            <button class="btn btn-color-2" type="button" onclick="location.href='https://github.com/Bibhushan21/Password_Management_System_GUI'">
+              GitHub
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="ai,backend">
+          <div class="project-card__media">
+            <img src="./assets/FaceRecognition.jpeg" alt="Gesichtserkennung und Emotionen" class="project-img" loading="lazy" />
+          </div>
+          <h3 class="project-card__title">Face & Emotion Detection</h3>
+          <div class="project-card__actions">
+            <button
+              class="btn btn-color-1"
+              type="button"
+              data-open-project
+              data-title="Face & Emotion Detection"
+              data-tags="ai,backend"
+              data-github="https://github.com/Bibhushan21/Face_Emotion_Detection"
+              data-image="./assets/FaceRecognition.jpeg"
+              data-description="Computer-Vision-Projekt für Gesichtserkennung und Emotion-Klassifikation."
+            >
+              Details
+            </button>
+            <button class="btn btn-color-2" type="button" onclick="location.href='https://github.com/Bibhushan21/Face_Emotion_Detection'">
+              GitHub
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="ai,backend">
+          <div class="project-card__media">
+            <img src="./assets/Dino.jpeg" alt="Dino-Spiel (ML-DQN)" class="project-img" loading="lazy" />
+          </div>
+          <h3 class="project-card__title">Dino AI (DQN)</h3>
+          <div class="project-card__actions">
+            <button
+              class="btn btn-color-1"
+              type="button"
+              data-open-project
+              data-title="Dino AI (ML DQN)"
+              data-tags="ai,backend"
+              data-github="https://github.com/Bibhushan21/DinoAi-ML-DQN-"
+              data-image="./assets/Dino.jpeg"
+              data-description="DQN-Agent zur Optimierung des Chrome-Dino-Spiels."
+            >
+              Details
+            </button>
+            <button class="btn btn-color-2" type="button" onclick="location.href='https://github.com/Bibhushan21/DinoAi-ML-DQN-'">
+              GitHub
+            </button>
+          </div>
+        </article>
+
+        <article class="project-card" data-tags="backend">
+          <div class="project-card__media">
+            <img src="./assets/SQL.jpeg" alt="Fußball-Management-System (SQL)" class="project-img" loading="lazy" />
+          </div>
+          <h3 class="project-card__title">Football Management (SQL)</h3>
+          <div class="project-card__actions">
+            <button
+              class="btn btn-color-1"
+              type="button"
+              data-open-project
+              data-title="Football Management (SQL)"
+              data-tags="backend"
+              data-github="https://github.com/Bibhushan21/Football-Management-System"
+              data-image="./assets/SQL.jpeg"
+              data-description="SQL-basiertes Management-System mit sauberem Datenmodell."
+            >
+              Details
+            </button>
+            <button class="btn btn-color-2" type="button" onclick="location.href='https://github.com/Bibhushan21/Football-Management-System'">
+              GitHub
+            </button>
+          </div>
+        </article>
       </div>
 
       
@@ -535,6 +668,28 @@
         onclick="location.href='./#contact'"
       />
     </section>
+    </main>
+    <dialog class="modal" id="project-modal" aria-label="Projekt Details">
+      <div class="modal__inner">
+        <button class="modal__close icon-btn" type="button" data-close-modal aria-label="Schließen">
+          <span aria-hidden="true">✕</span>
+        </button>
+        <div class="modal__grid">
+          <div class="modal__media">
+            <img id="modal-image" alt="" />
+          </div>
+          <div class="modal__content">
+            <p class="eyebrow" id="modal-tags"></p>
+            <h2 class="modal__title" id="modal-title"></h2>
+            <p class="modal__desc" id="modal-description"></p>
+            <div class="btn-container modal__actions">
+              <a class="btn btn-color-1" id="modal-github" href="#" target="_blank" rel="noreferrer">GitHub öffnen</a>
+              <button class="btn btn-color-2" type="button" data-close-modal>Schließen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
     <section id="contact">
       <p class="section__text__p1">Kontakt</p>
       <h1 class="title">Kontakt aufnehmen</h1>
