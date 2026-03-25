@@ -1,23 +1,23 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Mein Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <div id="scroll-progress" aria-hidden="true"></div>
     <nav id="desktop-nav">
       <div class="logo">Bibhushan Subedi</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Über mich</a></li>
+          <li><a href="#experience">Kompetenzen</a></li>
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
       </div>
     </nav>
@@ -30,42 +30,42 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="#about" onclick="toggleMenu()">Über mich</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Kompetenzen</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projekte</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
         </div>
       </div>
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile2-modified.png" alt="Bibhushan Subedi profile picture" />
+        <img src="./assets/Front.png" alt="Profilfoto von Bibhushan Subedi" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
+        <p class="section__text__p1">Hallo, ich bin</p>
         <h1 class="title">Bibhushan Subedi</h1>
-        <p class="section__text__p2">Software Engineer</p>
+        <p class="section__text__p2">Softwareentwickler</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/CV.pdf')"
           >
-            Download CV
+            Lebenslauf Herunterladen
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+            Kontaktinfo
           </button>
         </div>
         <div id="socials-container">
           <img
             src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
+            alt="Mein LinkedIn-Profil"
             class="icon"
             onclick="location.href='https://www.linkedin.com/in/bibhushan-subedi-781176299/'"
           />
           <img
             src="./assets/github.png"
-            alt="My Github profile"
+            alt="Mein GitHub-Profil"
             class="icon"
             onclick="location.href='https://github.com/Bibhushan21'"
           />
@@ -73,13 +73,13 @@
       </div>
     </section>
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+      <p class="section__text__p1">Lerne mich kennen</p>
+      <h1 class="title">Über mich</h1>
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./assets/profile-side.jpg"
-            alt="Profile picture"
+            src="./assets/Side.png"
+            alt="Profilfoto"
             class="about-pic"
           />
         </div>
@@ -88,124 +88,120 @@
             <div class="details-container">
               <img
                 src="./assets/experience.png"
-                alt="Experience icon"
+                alt="Erfahrungs-Icon"
                 class="icon"
               />
-              <h3>Experience</h3>
-              <p>1+ years <br />Software Development</p>
+              <h3>Erfahrung</h3>
+              <p>1+ Jahre <br />Softwareentwicklung</p>
             </div>
             <div class="details-container">
               <img
                 src="./assets/education.png"
-                alt="Education icon"
+                alt="Ausbildungs-Icon"
                 class="icon"
               />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelor in Software Engineering<br />2023-2026</p>
+              <h3>Ausbildung</h3>
+              <p>B.Sc. Bachelor in Software Engineering<br />2023–2026</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-                Hello, I am Bibhushan Subedi, an enthusiastic Software Engineering student at the University of Europe for Applied Sciences, class of 2026. My specialty lies in both mobile application and website development, in which I am proficient with programming languages such as Python, JavaScript, Java, C, and SQL.
+                Hallo, ich bin Bibhushan Subedi, ein engagierter Student im Bereich Software Engineering an der University of Europe for Applied Sciences (Jahrgang 2026). Meine Schwerpunkte liegen in der Entwicklung mobiler Anwendungen und von Websites. Dabei arbeite ich unter anderem mit den Programmiersprachen Python, JavaScript, Java, C und SQL.
 
-                In the process, I managed to compile a portfolio of projects as diverse as developing cross-platform mobile applications to AI-driven solutions and websites that assure seamless user experiences. Some of the most significant projects I have dealt with include a real-time updating weather app and website, an AI bot to optimize gameplay of the Dino game, and a football management system working on a strong SQL database.
+                In diesem Rahmen habe ich ein vielfältiges Projektportfolio aufgebaut: von plattformübergreifenden Mobile-Apps über KI-gestützte Lösungen bis hin zu Websites, die eine reibungslose Nutzererfahrung gewährleisten. Zu meinen wichtigsten Projekten zählen eine Wetter-App und -Website mit Echtzeit-Updates, ein KI-Bot zur Optimierung des Dino-Spiels sowie ein Fußball-Management-System, das auf einer soliden SQL-Datenbank basiert.
                 
-                I am always up for learning and applying new technologies in building efficient, scalable, and user-friendly solutions. This includes full-stack development, mobile app development with Flutter, website development, and artificial intelligence.
+                Ich habe Freude daran, neue Technologien zu lernen und anzuwenden, um effiziente, skalierbare und nutzerfreundliche Lösungen zu entwickeln. Dazu gehören Full-Stack-Entwicklung, Mobile-App-Entwicklung mit Flutter, Webentwicklung und Künstliche Intelligenz.
                 
-                I always seek an opportunity that keeps growing me as a developer with valued contributions to innovative projects that have real-world impact.
+                Ich suche stets nach Möglichkeiten, die mich als Entwickler weiterbringen und mit meinem Beitrag zu innovativen Projekten einen echten Nutzen im realen Umfeld schaffen.
             </p>
           </div>
         </div>
       </div>
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Pfeil"
         class="icon arrow"
         onclick="location.href='./#experience'"
       />
     </section>
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
+      <p class="section__text__p1">Entdecken Sie meine</p>
+      <h1 class="title">Kompetenzen</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Frontend-Entwicklung</h2>
             <div class="article-container">
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>HTML</h3>
-                  <p>Experienced</p>
+                  <p>Erfahren</p>
                 </div>
               </article>
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>CSS</h3>
-                  <p>Experienced</p>
+                  <p>Erfahren</p>
                 </div>
               </article>
               
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Intermediate</p>
+                  <p>Fortgeschritten</p>
                 </div>
-              </article>
-
-              
-             
               </article>
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
+            <h2 class="experience-sub-title">Backend-Entwicklung</h2>
             <div class="article-container">
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>Python</h3>
-                  <p>Intermediate</p>
+                  <p>Fortgeschritten</p>
                 </div>
               </article>
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>Java</h3>
-                  <p>Intermediate</p>
+                  <p>Fortgeschritten</p>
                 </div>
               </article>
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>C/C++</h3>
-                  <p>Intermediate</p>
+                  <p>Fortgeschritten</p>
                 </div>
               </article>
            
@@ -218,28 +214,28 @@
       <div class="experience-details-container">
         <div class="about-containers">
         <div class="details-container">
-          <h2 class="experience-sub-title">App Development</h2>
+          <h2 class="experience-sub-title">App-Entwicklung</h2>
           <div class="article-container">
             <article>
               <img
                 src="./assets/checkmark.png"
-                alt="Experience icon"
+                alt="Häkchen"
                 class="icon"
               />
               <div>
                 <h3>Flutter</h3>
-                <p>Experienced</p>
+                <p>Erfahren</p>
               </div>
             </article>
-            <h2 class="experience-sub-title">Methodologies</h2>
+            <h2 class="experience-sub-title">Methoden</h2>
             <article>
               <img
                 src="./assets/checkmark.png"
-                alt="Experience icon"
+                alt="Häkchen"
                 class="icon"
               />
               <div>
-                <h3>Agile and Scrum</h3>
+                <h3>Agile & Scrum</h3>
                
               </div>
             </article>
@@ -255,19 +251,19 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>Cloud Computing(AWS)</h3>
-                  <p>Basic</p>
+                  <p>Grundlagen</p>
                   
                 </div>
               </article>
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
@@ -278,7 +274,7 @@
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
@@ -292,47 +288,47 @@
           </div>
 
           <div class="details-container">
-            <h2 class="experience-sub-title">Tools & Frameworks</h2>
+            <h2 class="experience-sub-title">Werkzeuge & Frameworks</h2>
             <div class="article-container">
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>React.js</h3>
-                  <p>Basic</p>
+                  <p>Grundlagen</p>
                 </div>
               </article>
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>Linux</h3>
-                  <p>Basic</p>
+                  <p>Grundlagen</p>
                 </div>
               </article>
 
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
                   <h3>Git</h3>
-                  <p>Intermediate</p>
+                  <p>Fortgeschritten</p>
                 </div>
               </article>
 
               <article>
                 <img
                   src="./assets/checkmark.png"
-                  alt="Experience icon"
+                  alt="Häkchen"
                   class="icon"
                 />
                 <div>
@@ -346,34 +342,85 @@
 
         </div>
         
-            
+      <div class="experience-details-container">
+        <div class="about-containers internship-containers">
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">Praktikum: Agentic AI Softwareentwicklung</h2>
+            <p class="internship-meta">
+              <strong>Multiverz Pte Ltd</strong> · Remote · 03/2025–08/2025
+            </p>
+            <ul class="internship-list internship-text">
+              <li>
+                Multi-Agent-Systemarchitektur: Entwurf und Implementierung eines skalierbaren KI-Systems unter Verwendung von LangChain und der
+                Google Gemini API, das 8 spezialisierte Agenten für die strategische Informationsanalyse mit paralleler und sequenzieller Verarbeitung
+                koordiniert.
+              </li>
+              <li>
+                Kosten- und Leistungsoptimierung: Entwicklung fortschrittlicher LLM-Prompt-Engineering-Strategien, Reduzierung der API-Kosten um
+                40 % durch intelligente Ratenbegrenzung und asynchrone Verarbeitung bei gleichbleibend hoher Antwortqualität.
+              </li>
+              <li>
+                Backend-Engineering: Aufbau eines leistungsstarken FastAPI-Backends mit Echtzeit-Streaming-Fähigkeiten unter Verwendung eines
+                Orchestrator-Musters zur gleichzeitigen Koordination mehrerer KI-Agenten.
+              </li>
+              <li>
+                Datenbankintegration: Integration von PostgreSQL mit SQLAlchemy ORM zur Verfolgung von Agentenleistungsmetriken, Token-Nutzung und
+                Analysesitzungen, um eine datengesteuerte Optimierung der KI-Pipeline zu ermöglichen.
+              </li>
+              <li>
+                Forschung und Analyse: Durchführung einer statistischen Auswertung von Multi-Agenten-Architekturen mithilfe von Pandas, NumPy und
+                Matplotlib; Erstellung von Visualisierungen in Forschungsqualität zur Unterstützung der Thesendokumentation.
+              </li>
+            </ul>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title">Thesis</h2>
+            <div class="internship-text">
+              <p>
+                <strong>
+                  Optimierung der kognitiven Arbeitsteilung in Multi-Agent-KI-Systemen
+                </strong>
+                <span style="color: rgb(85, 85, 85)">
+                  (Optimizing Cognitive Division of Labor in Multi-Agent AI Systems)
+                </span>
+              </p>
+              <p>
+                Fokus: Wie sich die kognitive Arbeitsteilung in Multi-Agent-Systemen so optimieren lässt, dass Zusammenarbeit effizienter und
+                Ergebnisse robuster werden.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Pfeil"
         class="icon arrow"
         onclick="location.href='./#projects'"
       />
     </section>
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <p class="section__text__p1">Meine aktuellen Projekte</p>
+      <h1 class="title">Projekte</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
               <img
                 src="./assets/weatherapp Image.png"
-                alt="Project 1"
+                alt="Wetter-App"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Weather App</h2>
+            <h2 class="experience-sub-title project-title">Wetter-App</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/Bibhushan21/Flutter_WeatherApp'"
               >
-                Github
+                GitHub
               </button>
               
             </div>
@@ -382,17 +429,17 @@
             <div class="article-container">
               <img
                 src="./assets/shipping-calculator.png"
-                alt="Project 2"
+                alt="Kostenrechner für Container-Versand"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Shipping Container Cost Calculator</h2>
+            <h2 class="experience-sub-title project-title">Kostenrechner für Container-Versand</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/Bibhushan21/ShippingCostCalculator'"
               >
-                Github
+                GitHub
               </button>
               
             </div>
@@ -401,17 +448,17 @@
             <div class="article-container">
               <img
                 src="./assets/Password_Management_System.jpeg"
-                alt="Project 3"
+                alt="Passwortverwaltungssystem"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Password Management System</h2>
+            <h2 class="experience-sub-title project-title">Passwortverwaltungssystem</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/Bibhushan21/Password_Management_System_GUI'"
               >
-                Github
+                GitHub
               </button>
               
             </div>
@@ -424,17 +471,17 @@
             <div class="article-container">
               <img
                 src="./assets/FaceRecognition.jpeg"
-                alt="Project 1"
+                alt="Gesichtserkennung und Emotionen"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Face Emotion Recognition</h2>
+            <h2 class="experience-sub-title project-title">Gesichtserkennung und Emotionen</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/Bibhushan21/Face_Emotion_Detection'"
               >
-                Github
+                GitHub
               </button>
               
             </div>
@@ -443,17 +490,17 @@
             <div class="article-container">
               <img
                 src="./assets/Dino.jpeg"
-                alt="Project 2"
+                alt="Dino-Spiel (ML-DQN)"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Dino Game (ML-DQN)</h2>
+            <h2 class="experience-sub-title project-title">Dino-Spiel (ML-DQN)</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/Bibhushan21/DinoAi-ML-DQN-'"
               >
-                Github
+                GitHub
               </button>
               
             </div>
@@ -462,17 +509,17 @@
             <div class="article-container">
               <img
                 src="./assets/SQL.jpeg"
-                alt="Project 3"
+                alt="Fußball-Management-System (SQL)"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Football Management System(SQL)</h2>
+            <h2 class="experience-sub-title project-title">Fußball-Management-System (SQL)</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/Bibhushan21/Football-Management-System'"
               >
-                Github
+                GitHub
               </button>
               
             </div>
@@ -483,19 +530,19 @@
       
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon"
+        alt="Pfeil"
         class="icon arrow"
         onclick="location.href='./#contact'"
       />
     </section>
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <p class="section__text__p1">Kontakt</p>
+      <h1 class="title">Kontakt aufnehmen</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
             src="./assets/email.png"
-            alt="Email icon"
+            alt="E-Mail-Icon"
             class="icon contact-icon email-icon"
           />
           <p><a href="mailto:subedibibhushan@outlook.de">subedibibhushan@outlook.de</a></p>
@@ -503,7 +550,7 @@
         <div class="contact-info-container">
           <img
             src="./assets/linkedin.png"
-            alt="LinkedIn icon"
+            alt="LinkedIn-Icon"
             class="icon contact-icon"
           />
           <p><a href="https://www.linkedin.com/in/bibhushan-subedi-781176299/">LinkedIn</a></p>
@@ -514,14 +561,14 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#experience">Kompetenzen</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#contact">Kontakt</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Bibhushan Subedi. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 Bibhushan Subedi. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
