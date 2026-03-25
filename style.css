@@ -3,11 +3,22 @@
   padding: 0;
 }
 
+:root {
+  --accent: #be1d3e;
+  --bg: #f4efe9;
+  --surface: rgba(244, 239, 233, 0.72);
+  --menu: #f9f6f2;
+  --text: #111;
+  --muted: rgb(85, 85, 85);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
 body {
   font-family: "Poppins", sans-serif;
     /* background-color: #d1e1fa; */
     /* background-color: #eccd92; */
-    background-color: #c3c3c3;
+    /* Unique light base: warm "parchment" */
+    background-color: var(--bg);
     /* background-image: url(./assets/bg_image.jpg); */
   
 }
@@ -17,7 +28,7 @@ html {
 }
 
 p {
-  color: rgb(85, 85, 85);
+  color: var(--muted);
 }
 
 /* TRANSITION */
@@ -35,7 +46,8 @@ nav,
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface);
+  border-bottom: 1px solid rgba(190, 29, 62, 0.18);
   
   
   
@@ -48,28 +60,53 @@ nav {
   height: 17vh;
 }
 
+/* Sticky + glass effect */
+#desktop-nav,
+#hamburger-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
 }
 
+/* Active section link (scroll spy) */
+.nav-links a.is-active {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgba(190, 29, 62, 0.75);
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid rgba(190, 29, 62, 0.45);
+  outline-offset: 6px;
+  border-radius: 10px;
+}
+
 a {
-  color: black;
+  color: var(--text);
   text-decoration: none;
-  text-decoration-color: rgb(153, 44, 44);
+  text-decoration-color: rgba(190, 29, 62, 0.65);
 }
 
 a:hover {
   color: rgb(128, 128, 128);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: rgba(190, 29, 62, 0.45);
 }
 
 .logo {
   font-size: 2rem;
-  color: black;
+  color: var(--text);
 }
 
 .logo:hover {
@@ -100,18 +137,18 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: var(--menu);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links a {
@@ -121,7 +158,24 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(
+    90deg,
+    rgba(190, 29, 62, 0.85),
+    rgba(190, 29, 62, 0.35)
+  );
+  z-index: 2000;
 }
 
 .menu-links li {
@@ -221,6 +275,12 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.icon:hover {
+  transform: translateY(-1px) scale(1.04);
+  opacity: 0.92;
 }
 
 /* BUTTONS */
@@ -237,6 +297,17 @@ section {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  transition: transform 160ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .btn-color-1,
@@ -311,6 +382,13 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.details-container:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(190, 29, 62, 0.22);
 }
 
 .section-container {
@@ -372,6 +450,43 @@ article .icon {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.color-container:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(190, 29, 62, 0.22);
+}
+
+/* Reveal animations (JS toggles .is-visible) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .project-img {
@@ -405,9 +520,35 @@ article .icon {
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
+}
+
+/* INTERNSHIP + THESIS (Experience section) */
+.internship-text {
+  text-align: left;
+}
+
+.internship-meta {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: rgb(85, 85, 85);
+}
+
+.internship-list {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.internship-list li {
+  margin: 0.4rem 0;
+  color: rgb(85, 85, 85);
+}
+
+/* Keep thesis card height to content */
+.internship-containers {
+  align-items: flex-start;
 }
 
 .contact-info-container {
