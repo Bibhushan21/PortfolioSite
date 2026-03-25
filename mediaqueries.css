@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
 @media screen and (max-width: 1400px) {
     #profile {
       height: 83vh;
@@ -37,12 +35,35 @@
       height: fit-content;
     }
     section {
-      margin: 0 5%;
+      margin: 0 auto;
     }
     .section__pic-container {
       width: 275px;
       height: 275px;
       margin: 0 auto 2rem;
+    }
+
+    /* Keep About image same size as profile image on tablet */
+    #about .section__pic-container {
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;
+    }
+
+    .featured-case {
+      grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .metrics-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .modal__grid {
+      grid-template-columns: 1fr;
     }
     .about-containers {
       margin-top: 0;
@@ -92,6 +113,26 @@
       width: auto;
       height: 46vw;
       justify-content: center;
+    }
+
+    /* Keep About image large but responsive on mobile */
+    #about .section__pic-container {
+      width: min(92vw, 360px);
+      height: min(92vw, 360px);
+      margin: 0 auto 1.5rem;
+    }
+
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-card__actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .featured-case__title {
+      font-size: 1.65rem;
     }
     .section__text__p2 {
       font-size: 1.25rem;
